@@ -112,7 +112,7 @@ public class CarRentalControllerTest {
     void testMakeReservationValidationError() throws Exception {
         ReservationRequest requestDto = new ReservationRequest();
         requestDto.setCarType(CarType.SEDAN);
-        requestDto.setStartTime(LocalDateTime.of(2020, 1, 1, 10, 0)); // Invalid: in the past
+        requestDto.setStartTime(LocalDateTime.of(2020, 1, 1, 10, 0));
         requestDto.setDays(0);
 
         mockMvc.perform(post("/car-rental/rent")
